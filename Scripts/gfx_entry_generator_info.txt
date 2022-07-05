@@ -1,0 +1,11 @@
+Compression for MD
+Leader Portraits - DXT1 (BC1) - Mips
+Event Pictures - DXT5 (BC3) - No Mips
+Tech Icons - DXT1 (BC1)  - No Mips
+Loading Screens - DXT1 (BC1) - No Mips
+
+Hey there, here is a simple script for python. This requires https://developer.nvidia.com/nvidia-texture-tools-exporter to handle the automation. What you need to do manually in the script is change line 18 in the output script to adjust based on what you need. The following options above are what MD has used and noticed no noticeable loss in quality. 
+
+Here's where it gets a bit tricky for those who are unfamiliar with this type of automation. The python script outputs a .nvtt batch script. You need to first find where this tool is installed or install it where it is easy to find in your PC install. You then need to open Powershell or Command Prompt and run the following command: nvtt_export.exe --batch convertDDS.nvtt. This runs the nvtt_export tool as a automatable batch script that will then allow you to compress down all of your files. 
+
+This has helped MD go from 2.7 gigs in mod size down to 1.5 gigs for our upcoming 1.6.3 update.

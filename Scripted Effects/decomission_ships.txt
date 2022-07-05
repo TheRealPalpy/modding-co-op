@@ -1,0 +1,39 @@
+delete_old_DDs = {
+        cost = 0
+
+        allowed = {
+        }
+
+        available = {
+            is_ai = no
+            always = yes
+        }
+
+        complete_effect = {
+            set_temp_variable = { temp_number_of_destroyers = num_ships_with_type@destroyer }
+            destroy_ships = {
+                type = ship_hull_light_1
+                count = 5
+            }
+            if = {
+                limit = {
+                    check_variable = { temp_number_of_destroyers = num_ships_with_type@destroyer }
+                }
+                destroy_ships = {
+                    type = ship_hull_light_2
+                    count = 5
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = { temp_number_of_destroyers = num_ships_with_type@destroyer }
+                }
+                destroy_ships = {
+                    type = ship_hull_light_3
+                    count = 5
+                }
+            }
+
+            #etc, etc
+        }
+    }

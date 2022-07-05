@@ -1,0 +1,1 @@
+A simple script that reads the provinces.bmp file and fixes the X-crossing errors, outputing a province_fixed.bmp
